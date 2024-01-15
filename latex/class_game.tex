@@ -1,0 +1,147 @@
+\doxysection{Game Class Reference}
+\hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+
+
+A meta class used for different game-\/related things.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_a9876ae259b69d55fde4591968e97a706}{print\+Sep}} (bool startline, bool endline)
+\begin{DoxyCompactList}\small\item\em Prints a separation line for a better view. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_abfff52e78cedc148b35e202d64b2ccfc}\label{class_game_abfff52e78cedc148b35e202d64b2ccfc} 
+void {\bfseries print\+Logo} ()
+\begin{DoxyCompactList}\small\item\em Prints game\textquotesingle{}s logo. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}\label{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90} 
+void {\bfseries start} ()
+\begin{DoxyCompactList}\small\item\em Starts the game. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_ad32323074efd1d43089d34ab146a10c7}{choose\+Class}} ()
+\begin{DoxyCompactList}\small\item\em Choose player\textquotesingle{}s class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a505c66dbefdd6963c8e3387cc44aa558}{print\+Stats}} (int player\+Speed, int enemy\+Speed, int player\+Damage, int enemy\+Damage, int player\+Health, int enemy\+Health, std\+::string enemy\+Name)
+\begin{DoxyCompactList}\small\item\em Print stats of both player and enemy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ad7e309c5c66284a3592e201dce7d9d78}{fight}} (int player\+Speed, int enemy\+Speed, int player\+Damage, int enemy\+Damage, int player\+Health, int enemy\+Health, std\+::string enemy\+Name)
+\begin{DoxyCompactList}\small\item\em Engage with enemy. Currently completely broken. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_af9556e91d09e380f167c7274b6b94410}{dodge}} ()
+\begin{DoxyCompactList}\small\item\em Dodge enemy\textquotesingle{}s attack. Is not implemented yet. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_a6aa846a51d7f989d59c6d85afd178c4a}\label{class_game_a6aa846a51d7f989d59c6d85afd178c4a} 
+bool {\bfseries parry} ()
+\begin{DoxyCompactList}\small\item\em Parry enemy\textquotesingle{}s attack if dodge returned 1. Is not implemented yet. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_acd90b236113cc1ff78c5249bee38cc24}\label{class_game_acd90b236113cc1ff78c5249bee38cc24} 
+void {\bfseries credits} ()
+\begin{DoxyCompactList}\small\item\em I have an extreme case of burnout and depression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A meta class used for different game-\/related things. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_ad32323074efd1d43089d34ab146a10c7}\label{class_game_ad32323074efd1d43089d34ab146a10c7} 
+\index{Game@{Game}!chooseClass@{chooseClass}}
+\index{chooseClass@{chooseClass}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{chooseClass()}{chooseClass()}}
+{\footnotesize\ttfamily int Game\+::choose\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Choose player\textquotesingle{}s class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & Player\textquotesingle{}s number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Numerical value of player\textquotesingle{}s class, where\+: 1\+: \doxylink{class_warrior}{Warrior}, 2\+: \doxylink{class_archer}{Archer}, 3\+: \doxylink{class_mage}{Mage}, 0\+: \doxylink{class_deprived}{Deprived}. 
+\end{DoxyReturn}
+\Hypertarget{class_game_af9556e91d09e380f167c7274b6b94410}\label{class_game_af9556e91d09e380f167c7274b6b94410} 
+\index{Game@{Game}!dodge@{dodge}}
+\index{dodge@{dodge}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{dodge()}{dodge()}}
+{\footnotesize\ttfamily bool Game\+::dodge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dodge enemy\textquotesingle{}s attack. Is not implemented yet. 
+
+\begin{DoxyReturn}{Returns}
+1 if attack was dodged, 0 if not
+\end{DoxyReturn}
+\Hypertarget{class_game_ad7e309c5c66284a3592e201dce7d9d78}\label{class_game_ad7e309c5c66284a3592e201dce7d9d78} 
+\index{Game@{Game}!fight@{fight}}
+\index{fight@{fight}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{fight()}{fight()}}
+{\footnotesize\ttfamily void Game\+::fight (\begin{DoxyParamCaption}\item[{int}]{player\+Speed,  }\item[{int}]{enemy\+Speed,  }\item[{int}]{player\+Damage,  }\item[{int}]{enemy\+Damage,  }\item[{int}]{player\+Health,  }\item[{int}]{enemy\+Health,  }\item[{std\+::string}]{enemy\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Engage with enemy. Currently completely broken. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Speed} & Player\textquotesingle{}s speed.\\
+\hline
+{\em enemy\+Speed} & Enemy\textquotesingle{}s speed.\\
+\hline
+{\em player\+Damage} & Player\textquotesingle{}s damage.\\
+\hline
+{\em enemy\+Damage} & Enemy\textquotesingle{}s damage.\\
+\hline
+{\em player\+Health} & Player\textquotesingle{}s health.\\
+\hline
+{\em enemy\+Health} & Enemy\textquotesingle{}s health.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_a9876ae259b69d55fde4591968e97a706}\label{class_game_a9876ae259b69d55fde4591968e97a706} 
+\index{Game@{Game}!printSep@{printSep}}
+\index{printSep@{printSep}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{printSep()}{printSep()}}
+{\footnotesize\ttfamily void Game\+::print\+Sep (\begin{DoxyParamCaption}\item[{bool}]{startline,  }\item[{bool}]{endline }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints a separation line for a better view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em startline} & {\ttfamily 1} if the line starts with a newline character.\\
+\hline
+{\em endline} & {\ttfamily 1} if the line ends with a newline character.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_a505c66dbefdd6963c8e3387cc44aa558}\label{class_game_a505c66dbefdd6963c8e3387cc44aa558} 
+\index{Game@{Game}!printStats@{printStats}}
+\index{printStats@{printStats}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{printStats()}{printStats()}}
+{\footnotesize\ttfamily void Game\+::print\+Stats (\begin{DoxyParamCaption}\item[{int}]{player\+Speed,  }\item[{int}]{enemy\+Speed,  }\item[{int}]{player\+Damage,  }\item[{int}]{enemy\+Damage,  }\item[{int}]{player\+Health,  }\item[{int}]{enemy\+Health,  }\item[{std\+::string}]{enemy\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print stats of both player and enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Speed} & Player\textquotesingle{}s speed.\\
+\hline
+{\em enemy\+Speed} & Enemy\textquotesingle{}s speed.\\
+\hline
+{\em player\+Damage} & Player\textquotesingle{}s damage.\\
+\hline
+{\em enemy\+Damage} & Enemy\textquotesingle{}s damage.\\
+\hline
+{\em player\+Health} & Player\textquotesingle{}s health.\\
+\hline
+{\em enemy\+Health} & Enemy\textquotesingle{}s health.\\
+\hline
+{\em enemy\+Name} & Enemy\textquotesingle{}s name.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+h\end{DoxyCompactItemize}

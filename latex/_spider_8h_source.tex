@@ -1,0 +1,30 @@
+\doxysection{Spider.\+h}
+\hypertarget{_spider_8h_source}{}\label{_spider_8h_source}\index{Enemy/Spider.h@{Enemy/Spider.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Enemy/IEnemy.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Resources.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_spider}{Spider}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_enemy}{IEnemy}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Here,\ we\ initialize\ class\ Spider\ when\ EnemyFactory\ design\ pattern\ function\ is\ called}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_spider}{Spider}}()\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ type\ =\ \textcolor{stringliteral}{"{}spider"{}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ health\ =\ generateRandomNumber(1,\ 5);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ damage\ =\ generateRandomNumber(1,\ 5);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ speed\ =\ generateRandomNumber(1,\ 10);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Silky\ Spider"{}};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Here,\ we\ override\ IEnemy's\ displayInfo()\ method.\ Polymorphism\ in\ all\ it's\ glory}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ displayInfo()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Enemy:\ "{}}\ \ \ <<\ name}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nType:\ "{}}\ \ <<\ type}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nHP:\ "{}}\ \ \ \ <<\ health}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDMG:\ "{}}\ \ \ <<\ damage}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSpeed:\ "{}}\ <<\ speed;}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}

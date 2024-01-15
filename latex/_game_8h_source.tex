@@ -1,0 +1,165 @@
+\doxysection{Game.\+h}
+\hypertarget{_game_8h_source}{}\label{_game_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Enemy/IEnemy.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Enemy/Zombie.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Enemy/Spider.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a9876ae259b69d55fde4591968e97a706}{printSep}}(\textcolor{keywordtype}{bool}\ startline,\ \textcolor{keywordtype}{bool}\ endline)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (startline)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 120;\ i++)\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}="{}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (endline)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_abfff52e78cedc148b35e202d64b2ccfc}{printLogo}}()\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a9876ae259b69d55fde4591968e97a706}{printSep}}(0,\ 0);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Here\ we\ use\ raw\ output\ because\ of\ "{}\(\backslash\)"{}\ characters.}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::cout\ <<\ R\textcolor{stringliteral}{"{}(}}
+\DoxyCodeLine{00037\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_\_\_\ \ \ \ \ \ \ \ \_\_\_\_\ \ }}
+\DoxyCodeLine{00038\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \_\ \(\backslash\)\ \_\ \_\_\ |\ \_\_\ )\ }}
+\DoxyCodeLine{00039\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ |\ |\ |\ '\_\ \(\backslash\)|\ \ \_\ \(\backslash\)\ }}
+\DoxyCodeLine{00040\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ |\_|\ |\ |\ |\ |\ |\_)\ |}}
+\DoxyCodeLine{00041\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\_\_\_\_/|\_|\ |\_|\_\_\_\_/}}
+\DoxyCodeLine{00042\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00043\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Dungeons\ and\ Battles}}
+\DoxyCodeLine{00044\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v.\ 0.4.1}}
+\DoxyCodeLine{00045\ \textcolor{stringliteral}{)"{};}}
+\DoxyCodeLine{00046\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a9876ae259b69d55fde4591968e97a706}{printSep}}(0,\ 1);}}
+\DoxyCodeLine{00047\ \textcolor{stringliteral}{\ \ \ \ \}}}
+\DoxyCodeLine{00048\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start}}()\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_abfff52e78cedc148b35e202d64b2ccfc}{printLogo}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ make\ a\ less\ depressing\ story}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ have\ awaken\ from\ a\ deep\ afternoon\ slumber.\(\backslash\)n"{}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ found\ yourself\ on\ a\ beautiful\ green\ field\ full\ of\ blooming\ flowers\ and\ soft\ grass\ under\ a\ massive\ oak\ tree.\(\backslash\)n"{}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}It\ feels\ like\ you\ have\ been\ sleeping\ here\ for\ ages.\(\backslash\)n"{}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ are\ an\ honest\ adventurer.\ You\ have\ seen\ many\ scary\ things\ in\ your\ life,\ but\ now\ you\ are\ feeling\ safe.\(\backslash\)n"{}};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ travel\ alone.\ You\ have\ lost\ too\ many\ friends...\ You\ just\ don't\ want\ seeing\ people\ you\ love\ suffer\ again.\(\backslash\)n"{}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}Time\ to\ venture\ on\(\backslash\)"{}\ you\ thought.\ \(\backslash\)"{}Maybe\ I'll\ finally\ find\ her\ in\ that\ cave.\ They'll\ pay\ for\ everything\ they\ did\ to\ me\(\backslash\)"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ decided\ to\ check\ your\ equipment.\ It\ seems\ you\ are\ a...\(\backslash\)n"{}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}1.\ Warrior\(\backslash\)n"{}};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}2.\ Archer\(\backslash\)n"{}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}3.\ Mage\(\backslash\)n"{}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}(Choose\ a\ number\ from\ the\ list)\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_ad32323074efd1d43089d34ab146a10c7}{chooseClass}}()\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ playerClass;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ std::cin\ >>\ playerClass;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (playerClass)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Warrior}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ I\ couldn't\ implement\ damage\ resistance\ :(}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nA\ warrior.\ What\ a\ mighty\ class\ you\ find\ yourself\ in.\ After\ a\ few\ minutes,\ you\ find\ and\ equip\ your\ double-\/handed\ greatsword,\(\backslash\)n"{}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}but\ shield\ is\ nowhere\ to\ be\ found.\(\backslash\)n"{}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Now\ you\ recall:\ you\ chose\ the\ sheer\ power\ of\ this\ massive\ hunk\ of\ metall\ over\ your\ safety.\ Reckless,\ yet\ respectable\ choice.\(\backslash\)n"{}};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ playerClass\ =\ 1;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Archer}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nRusty\ dagger,\ short\ bow\ and\ a\ few\ arrows\ -\/\ that's\ everything\ you\ got\ for\ a\ self-\/defense.\ You\ are\ clearly\ a\ ranger.\(\backslash\)n"{}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}The\ best\ battles\ are\ won\ before\ they\ start.\ "{}};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Swift\ and\ lethal\ shots,\ nimble\ movements,\ precise\ strikes\ and\ deadly\ reflexes...\ You'll\ become\ a\ killing\ machine\ soon.\(\backslash\)n"{}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}But\ your\ body\ needs\ time\ and\ practice.\ Just\ as\ it\ did\ before.\(\backslash\)n"{}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ playerClass\ =\ 2;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mage}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTrying\ to\ remember\ something\ while\ being\ still\ asleep\ is\ tough,\ but\ you\ succeeded.\ Mostly.\(\backslash\)n"{}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ are\ The\ Magician\ -\/\ wise\ and\ powerful\ sorcerer,\ who\ learned\ a\ lot\ from\ his\ wanders\ throughout\ his\ life.\ You've\ been\ "{}};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}to\ the\ darkest\ places\ on\ the\ earth\ casting\ the\ most\ complex\ spells\ known\ to\ Man.\(\backslash\)n"{}};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Too\ bad\ you\ forgot\ them\ all.\(\backslash\)n"{}};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}With\ a\ greatstaff\ in\ your\ left\ hand\ and\ a\ small\ bag\ of\ goods\ in\ the\ right\ you\ decided\ to\ get\ up\ and\ continue\ your\ journey.\(\backslash\)n"{}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ playerClass\ =\ 3;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deprived}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ spent\ a\ couple\ of\ minutes\ looking\ for\ your\ belongings\ nowhere\ to\ be\ found.\(\backslash\)n"{}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}And\ then\ a\ thought\ has\ stroken\ your\ mind.\(\backslash\)n"{}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ are,\ quite\ literally,\ a\ no\ one.\ A\ Deprived.\(\backslash\)n"{}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Your\ journey\ is\ pointless\ and\ means\ nothing.\ You\ are\ not\ loved\ by\ anyone.\ No\ one\ will\ mourn\ your\ death.\(\backslash\)n"{}};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Having\ completely\ nothing,\ it\ will\ be\ tough\ should\ you\ continue\ your\ travels.\(\backslash\)n"{}};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Forever\ marked\ as\ an\ outlaw,\ you\ decided\ to\ continue.\ What\ a\ pathetic\ choice.\(\backslash\)n"{}};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ playerClass\ =\ 0;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ make\ some\ final\ preparations\ and\ decide\ to\ enter\ the\ damned\ cave.\ Things\ aren't\ looking\ great\ for\ you,\ but\ you've\ been\ to\ worse\ places.\(\backslash\)n"{}};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Upon\ arriving\ to\ the\ entrance,\ you\ start\ hearing\ deep\ growls\ of\ monsters\ nearby.\ Time\ to\ show\ them\ who's\ on\ the\ top\ of\ food\ chain!\(\backslash\)n"{}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ playerClass;}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a505c66dbefdd6963c8e3387cc44aa558}{printStats}}(\textcolor{keywordtype}{int}\ playerSpeed,\ \textcolor{keywordtype}{int}\ enemySpeed,\ \textcolor{keywordtype}{int}\ playerDamage,\ \textcolor{keywordtype}{int}\ enemyDamage,\ \textcolor{keywordtype}{int}\ playerHealth,\ \textcolor{keywordtype}{int}\ enemyHealth,\ std::string\ enemyName)\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlayer"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nHP:\ "{}}\ <<\ playerHealth\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDMG:\ "{}}\ <<\ playerDamage\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSpeed:\ "{}}\ <<\ playerSpeed\ <<\ std::endl;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ enemyName\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nHP:\ "{}}\ <<\ enemyHealth\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDMG:\ "{}}\ <<\ enemyDamage\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSpeed:\ "{}}\ <<\ enemySpeed\ <<\ std::endl;}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ad7e309c5c66284a3592e201dce7d9d78}{fight}}(\textcolor{keywordtype}{int}\ playerSpeed,\ \textcolor{keywordtype}{int}\ enemySpeed,\ \textcolor{keywordtype}{int}\ playerDamage,\ \textcolor{keywordtype}{int}\ enemyDamage,\ \textcolor{keywordtype}{int}\ playerHealth,\ \textcolor{keywordtype}{int}\ enemyHealth,\ std::string\ enemyName)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a505c66dbefdd6963c8e3387cc44aa558}{printStats}}(playerSpeed,\ enemySpeed,\ playerDamage,\ enemyDamage,\ playerHealth,\ enemyHealth,\ enemyName);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playerSpeed\ >\ enemySpeed)\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYour\ moves\ are\ so\ fast\ and\ smooth\ you\ caught\ your\ enemy\ off-\/guard.\ It's\ your\ chance\ now.\ Fight!\(\backslash\)n"{}};}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ enemyHealth\ =-\/\ playerDamage;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (playerSpeed\ <\ enemySpeed)\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nThe\ enemy\ has\ noticed\ you\ far\ sooner\ than\ you\ did\ and\ landed\ its\ first\ strike.\(\backslash\)n"{}};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ playerHealth\ =-\/\ enemyHealth;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (playerSpeed\ ==\ enemySpeed)\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nWow!\ You\ both\ noticed\ each\ other,\ but\ you\ are\ a\ true\ master\ of\ your\ craft,\ so\ you\ start\ first.\(\backslash\)n"{}};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ enemyHealth\ =-\/\ playerDamage;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a505c66dbefdd6963c8e3387cc44aa558}{printStats}}(playerSpeed,\ enemySpeed,\ playerDamage,\ enemyDamage,\ playerHealth,\ enemyHealth,\ enemyName);}
+\DoxyCodeLine{00170\ \ \ \ \ \};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_af9556e91d09e380f167c7274b6b94410}{dodge}}()\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isDodged\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isDodged;}
+\DoxyCodeLine{00181\ \ \ \ \ \};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a6aa846a51d7f989d59c6d85afd178c4a}{parry}}()\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isDodged\ =\ \mbox{\hyperlink{class_game_af9556e91d09e380f167c7274b6b94410}{dodge}}();}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !isDodged;}
+\DoxyCodeLine{00191\ \ \ \ \ \};}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_acd90b236113cc1ff78c5249bee38cc24}{credits}}()\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nIt\ was\ a\ truly\ hard\ fight.\ One\ might\ say,\ an\ ultimate\ test\ of\ your\ skills.\ But\ you\ succeeded.\(\backslash\)n"{}};}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ decided\ to\ get\ to\ the\ end\ of\ that\ cursed\ cave.\ A\ couple\ more\ meters...\(\backslash\)n"{}};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}There.\ You\ found\ her.\ An\ absolutely\ disfigured\ corpse\ of\ a\ young\ woman.\ Her\ clothes\ are\ torn\ apart\ like\ they\ are\ a\ dirty\ rags\ "{}};}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}and\ her\ body\ is\ wounded\ beyond\ the\ point\ of\ recognition.\(\backslash\)n"{}};}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ fell\ down\ on\ your\ knees.\ A\ grimace\ of\ horror\ on\ her\ face\ is\ forever\ imprinted\ in\ your\ memory.\(\backslash\)n"{}};}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}This\ is\ what\ you\ get\ after\ so\ many\ tiresome\ battles.\ A\ body\ of\ your\ beloved.\(\backslash\)n"{}};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ hear\ loud\ roars\ of\ monsters\ heading\ your\ way.\ After\ all,\ it\ seems\ you\ haven't\ killed\ them\ all.\(\backslash\)n"{}};}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ decide\ to\ end\ your\ journey\ here.\ She\ was\ the\ last\ thing\ keeping\ you\ in\ this\ world,\ and\ now\ she\ is\ gone.\(\backslash\)n"{}};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ are\ losing\ your\ consciousness\ from\ the\ vast\ blood\ loss.\ They\ won't\ get\ you\ alive.\(\backslash\)n"{}};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}With\ this\ thought\ in\ mind,\ you\ have\ decided\ to\ relax\ for\ the\ last\ time\ in\ your\ life.\(\backslash\)n"{}};}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \};}
+
+\end{DoxyCode}

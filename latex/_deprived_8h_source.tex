@@ -1,0 +1,31 @@
+\doxysection{Deprived.\+h}
+\hypertarget{_deprived_8h_source}{}\label{_deprived_8h_source}\index{Hero/Deprived.h@{Hero/Deprived.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Hero/IHero.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Resources.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_deprived}{Deprived}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_hero}{IHero}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_deprived}{Deprived}}()\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ type\ =\ \textcolor{stringliteral}{"{}deprived"{}};}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ health\ =\ 1;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ damage\ =\ 1;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ speed\ =\ 1;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ specialType\ =\ \textcolor{stringliteral}{"{}none"{}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ specialAmount\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deprived_aec6383e9086f21f777dfbfbcc8161766}{inspectSelf}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Player:\ "{}}\ <<\ type}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nHP:\ "{}}\ <<\ health}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDMG:\ "{}}\ <<\ damage}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSpeed:\ "{}}\ <<\ speed}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSpecial\ type:\ "{}}\ <<\ specialType}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nAmmo:\ "{}}\ <<\ specialAmount;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

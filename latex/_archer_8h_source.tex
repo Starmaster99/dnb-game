@@ -1,0 +1,33 @@
+\doxysection{Archer.\+h}
+\hypertarget{_archer_8h_source}{}\label{_archer_8h_source}\index{Hero/Archer.h@{Hero/Archer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Hero/IHero.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Resources.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_archer}{Archer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_hero}{IHero}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_archer}{Archer}}()\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ type\ =\ \textcolor{stringliteral}{"{}Archer"{}};}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ health\ =\ generateRandomNumber(1,\ 10);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ damage\ =\ generateRandomNumber(1,\ 10);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ speed\ =\ generateRandomNumber(1,\ 10);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ specialType\ =\ \textcolor{stringliteral}{"{}arrows"{}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ specialAmount\ =\ generateRandomNumber(1,\ 20);}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_archer_a8851158a99258edfe1cc7f04804ef260}{inspectSelf}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Player:\ "{}}\ <<\ type}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nHP:\ "{}}\ <<\ health}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDMG:\ "{}}\ <<\ damage}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSpeed:\ "{}}\ <<\ speed}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSpecial\ type:\ "{}}\ <<\ specialType}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nAmmo:\ "{}}\ <<\ specialAmount;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}
